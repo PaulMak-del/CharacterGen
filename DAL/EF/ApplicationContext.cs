@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace DAL.EF
 {
+    /**
+    Контекст для работы с БД
+     */
     public class ApplicationContext : DbContext
     {
         // Entities

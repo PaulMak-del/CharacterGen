@@ -1,9 +1,12 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace CharacterGenaration.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    /** 
+     * Удалить в последствии
+     */
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]

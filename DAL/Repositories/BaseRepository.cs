@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace DAL.Repositories
 {
+    /**
+     * Базовый репозиторий для работы с сущностями в БД
+     */
     public class BaseRepository<TEntity>
     {
         private IQueryable<TEntity> Set { get; }

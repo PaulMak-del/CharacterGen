@@ -8,5 +8,8 @@ using System.Threading.Tasks;
 
 namespace DAL.Repositories
 {
+    /**
+    Репозиторий для работы с сущностью "Раса"
+     */
     public class RaceRepository : BaseRepository<Race> {}
 }

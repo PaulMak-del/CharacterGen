@@ -1,11 +1,17 @@
-
+﻿
 using DAL.EF;
 using System.Runtime.CompilerServices;
 
 namespace CharacterGenaration
 {
+    /** 
+     * Класс, с которого всё началось
+     */
     public class Program
     {
+        /** 
+         * Точка входа в программу
+         */
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
@@ -39,7 +45,6 @@ namespace CharacterGenaration
         }
         private static void UpdateDatabase()
         {
-            // ���������� ������
             using (ApplicationContext db = new ApplicationContext())
             {
                 db.Database.EnsureDeleted();
