@@ -1,20 +1,24 @@
-
-
 using System.ComponentModel.DataAnnotations;
 
-/**
- * Сущность "Моральная позиция". Содержит основную информацию о моральных позициях.
- */
-public class MoralPosition
+namespace DAL.Entities
 {
     /**
-     * Идентификатор записи.
+     * Сущность "Моральная позиция". Содержит основную информацию о моральных позициях.
      */
-    [Key]
-    public Guid Id { get; set; }
+    public class MoralPosition
+    {
+        /**
+         * Идентификатор записи.
+         */
+        [Key]
+        public Guid Id { get; set; }
 
-    /**
-     * Название моральной позиции.
-     */
-    public string Name { get; set; }
+        /**
+         * Название моральной позиции.
+         */
+        public string Name { get; set; }
+
+        // Navigation Properties
+        public virtual ICollection<Character> Characters { get; set; }
+    }
 }

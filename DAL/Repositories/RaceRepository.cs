@@ -1,4 +1,5 @@
-﻿using DAL.Entities;
+﻿using DAL.EF;
+using DAL.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -11,5 +12,7 @@ namespace DAL.Repositories
     /**
     Репозиторий для работы с сущностью "Раса"
      */
-    public class RaceRepository : BaseRepository<Race> {}
+    public class RaceRepository : BaseRepository<Race>, IBaseRepository {
+        public RaceRepository(ApplicationContext context) : base(context) { }
+    }
 }

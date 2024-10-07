@@ -104,5 +104,8 @@ namespace DAL.Entities
          * Выступление (Performance) - навык, определяющий умение выступать перед аудиторией и использовать различные формы выражения.
          */
         public int Performance { get; set; }
+
+        // Navigation Properties
+        public virtual ICollection<Character> Characters { get; set; }
     }
 }

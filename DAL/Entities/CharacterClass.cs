@@ -14,5 +14,8 @@ namespace DAL.Entities
 
         /** Имя класса */
         public string Name { get; set; }
+
+        // Navigation Properties
+        public virtual ICollection<Character> Characters { get; set; }
     }
 }

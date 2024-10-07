@@ -16,5 +16,8 @@ namespace DAL.Entities
 
         /** Название расы */
         public string Name { get; set; }
+
+        // Navigation Properties
+        public virtual ICollection<Character> Characters { get; set; }
     }
 }

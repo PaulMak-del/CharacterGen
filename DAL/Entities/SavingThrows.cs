@@ -39,5 +39,8 @@ namespace DAL.Entities
          * Харизма (Charisma) - спасбросок, определяющий обаяние и лидерские качества персонажа.
          */
         public int Charisma { get; set; }
+
+        // Navigation Properties
+        public virtual ICollection<Character> Characters { get; set; }
     }
 }

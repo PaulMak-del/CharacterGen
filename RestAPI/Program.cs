@@ -1,5 +1,9 @@
 ﻿
+using Business;
 using DAL.EF;
+using DAL.Entities;
+using DAL.Repositories;
+using Microsoft.EntityFrameworkCore;
 using System.Runtime.CompilerServices;
 
 namespace CharacterGenaration
@@ -22,6 +26,8 @@ namespace CharacterGenaration
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            // Add services to DI
+            AddDependency(builder);
 
             var app = builder.Build();
 
@@ -52,6 +58,22 @@ namespace CharacterGenaration
 
                 db.SaveChanges();
             }
+        }
+
+        private static void AddDependency(WebApplicationBuilder builder)
+        {
+            builder.Services.AddDbContext<ApplicationContext>();
+            builder.Services.AddTransient<RaceRepository>();
+            builder.Services.AddTransient<BackgroundRepository>();
+            builder.Services.AddTransient<AbilityRepository>();
+            builder.Services.AddTransient<CharacterRepository>();
+            builder.Services.AddTransient<StatsRepository>();
+            builder.Services.AddTransient<SkillsRepository>();
+            builder.Services.AddTransient<SavingThrowsRepository>();
+            builder.Services.AddTransient<MoralPositionRepository>();
+            builder.Services.AddTransient<CharacterClassRepository>();
+
+            builder.Services.AddTransient<RaceManager>();
         }
     }
 

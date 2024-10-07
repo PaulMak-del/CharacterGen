@@ -12,5 +12,8 @@ namespace DAL.Entities
 
         /** Название происхождения */
         public string Name { get; set; }
+
+        // Navigation Properties
+        public virtual ICollection<Character> Characters { get; set; }
     }
 }
