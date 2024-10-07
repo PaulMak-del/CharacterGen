@@ -12,7 +12,7 @@ namespace DAL.Repositories
     /**
     Репозиторий для работы с сущностью "Раса"
      */
-    public class RaceRepository : BaseRepository<Race>, IBaseRepository {
+    public class RaceRepository : BaseRepository<Race> {
         public RaceRepository(ApplicationContext context) : base(context) { }
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace DAL.Entities
 {
@@ -8,6 +9,7 @@ namespace DAL.Entities
     public class Skills
     {
         /** Идентификатор записи */
+        [Key]
         public Guid Id { get; set; }
 
         /**

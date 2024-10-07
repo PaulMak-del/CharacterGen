@@ -1,6 +1,5 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using DAL.Entities;
 
 namespace DAL.Entities
 {
@@ -65,10 +64,6 @@ namespace DAL.Entities
          */
         [ForeignKey("SkillsId")]
         public Guid SkillsId { get; set; }
-
-        /**
-         * Навыки персонажа.
-         */
         public virtual Skills Skills { get; set; }
 
         /**
@@ -76,10 +71,6 @@ namespace DAL.Entities
          */
         [ForeignKey("StatsId")]
         public Guid StatsId { get; set; }
-
-        /**
-         * Характеристики персонажа.
-         */
         public virtual Stats Stats { get; set; }
 
         /**
@@ -87,10 +78,6 @@ namespace DAL.Entities
          */
         [ForeignKey("SavingThrowsId")]
         public Guid SavingThrowsId { get; set; }
-
-        /**
-         * Спасброски персонажа.
-         */
         public virtual SavingThrows SavingThrows { get; set; }
 
         /**
@@ -98,10 +85,6 @@ namespace DAL.Entities
          */
         [ForeignKey("RaceId")]
         public Guid RaceId { get; set; }
-
-        /**
-         * Раса персонажа.
-         */
         public virtual Race Race { get; set; }
 
         /**
@@ -109,13 +92,6 @@ namespace DAL.Entities
          */
         [ForeignKey("BackgroundId")]
         public Guid BackgroundId { get; set; }
-
-        /**
-         * Происхождение персонажа.
-         */
         public virtual Background Background { get; set; }
-
-        // Navigation Properties
-        public virtual ICollection<Character> Characters { get; set; }
     }
 }

@@ -23,6 +23,7 @@ namespace DAL.EF
         public DbSet<Skills> Skills { get; set; }
         public DbSet<Stats> Stats { get; set; }
         public DbSet<SavingThrows> SavingThrows { get; set; }
+        public DbSet<Ability_Character> Ability_Characters { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

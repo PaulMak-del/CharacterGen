@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace DAL.Entities
 {
     /**
@@ -6,6 +8,7 @@ namespace DAL.Entities
     public class Ability
     {
         /** Идентификатор записи */
+        [Key]
         public Guid Id { get; set; }
 
         /** Название способности */

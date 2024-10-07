@@ -1,10 +1,6 @@
-﻿
-using Business;
+﻿using Business;
 using DAL.EF;
-using DAL.Entities;
 using DAL.Repositories;
-using Microsoft.EntityFrameworkCore;
-using System.Runtime.CompilerServices;
 
 namespace CharacterGenaration
 {
@@ -21,7 +17,6 @@ namespace CharacterGenaration
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
