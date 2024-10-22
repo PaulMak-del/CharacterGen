@@ -1,0 +1,74 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Выравнивание по правому краю */
+    margin-top: 20px; /* Отступ сверху для отделения от других элементов */
+}
+
+.image-preview {
+    margin-bottom: 20px;
+    border: 1px solid #ccc; /* Добавляет рамку */
+    width: 100%; /* Ширина контейнера */
+    height: 200px; /* Высота контейнера */
+    display: flex; /* Используется для центрирования изображения */
+    justify-content: center; /* Центрирует изображение по горизонтали */
+    align-items: center; /* Центрирует изображение по вертикали */
+    background-color: #f0f0f0; /* Цвет фона */
+}
+
+.image-preview img {
+    max-width: 100%; /* Ширина изображения */
+    max-height: 100%;
+    height: auto; /* Высота изображения */
+    border-radius: 5px; /* Радиус углов изображения */
+}
+
+.result-preview {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

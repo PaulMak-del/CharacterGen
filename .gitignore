@@ -399,3 +399,6 @@ FodyWeavers.xsd
 
 # Doxygen documentation
 doxygen_doc/
+
+# Front
+WebUI/ClientApp/.angular
