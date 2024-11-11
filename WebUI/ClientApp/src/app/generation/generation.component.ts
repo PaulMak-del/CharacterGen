@@ -1,5 +1,6 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class GenerationComponent implements AfterViewInit {
     genders: string[] = ['Мужской', 'Женский'];
     classes: string[] = ['Воин', 'Маг', 'Лучник', 'Вор'];
 
-    constructor() {}
+    constructor(private router: Router) {}
 
     public ngAfterViewInit(): void {
         const form = document.getElementById('character-form') as HTMLFormElement;
@@ -50,5 +51,9 @@ export class GenerationComponent implements AfterViewInit {
         if (file) {
             reader.readAsDataURL(file);
         }
+    }
+
+    protected OnCharacterCreateButtonClick() {
+        this.router.navigate(['./character-create']);
     }
 }
